@@ -43,4 +43,5 @@ eclsk <- getData(eclsk2011, varnames = vars, addAttributes = TRUE,
                  omittedLevels = FALSE, defaultConditions = FALSE)
 
 mode(eclsk)
-percentile("x1mscalk4", c(10, 50, 100), data = eclsk, weightVar = NULL)
+percentile("x1mscalk4", c(10, 50, 100), data = eclsk, 
+           weightVar = "w4pf40")

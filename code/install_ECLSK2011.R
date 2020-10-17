@@ -13,14 +13,15 @@
 library(EdSurvey)
 
 # Downlaad ECLSK2011
-downloadECLS_K(root = "~/Data/", years = (2011), cache = TRUE)
+downloadECLS_K(root = "/media/hank01/source_data/", years = (2011), cache = TRUE)
 
 ## Received error that layout file was not downloaded, so manually 
 ## downloaded and placed in Data folder with .dat file.
 
 # Read .dat file into EdSurvey data frame.
-eclsk2011 <- readECLS_K2011("~/Data/ECLS_K/2011/", filename = "childK4p.dat", 
+eclsk2011 <- readECLS_K2011("/media/hank01/source_data/ECLS_K/2011/", 
+                            filename = "childK4p.dat", 
                             layoutFilename = "ECLSK2011_K4PUF.sps")
 
 # Save compressed version of EdSurvey dataframe to save time in future.
-saveRDS(eclsk2011, file = "~/Data/ECLS_K/2011/eclsk2011.Rds", compress = TRUE)
+saveRDS(eclsk2011, file = "/media/hank01/source_data/ECLS_K/2011/eclsk2011.Rds", compress = TRUE)
