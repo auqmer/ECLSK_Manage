@@ -8,3 +8,4 @@
 #************************************************************************
 library(EdSurvey)
 
+downloadECLS_K(root = "/media/hank01/", years = 1998, cache = TRUE)
