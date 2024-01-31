@@ -8,4 +8,15 @@
 #************************************************************************
 library(EdSurvey)
 
-downloadECLS_K(root = "/media/hank01/", years = 1998, cache = TRUE)
+downloadECLS_K(root = "/Volumes/qmer/source_data/", years = 1998, cache = TRUE)
+
+
+eclsk1998 <- readECLS_K1998(path = "/Volumes/qmer/source_data/ECLS_K/1998/",
+                            filename = "childK5p.dat",
+                            layoutFilename = "ECLSK2011_K5PUF.sps"
+                            )
+
+
+eclsk1998 <- readECLS_K1998(path = "~/Downloads/", 
+                            filename = "childK5p.dat",
+                            layoutFilename = "ECLSK2011_K5PUF.sps")
